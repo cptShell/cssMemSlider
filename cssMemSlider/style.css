@@ -34,6 +34,8 @@ body {
   width: 100%;
   height: 100%;
   padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (max-width: 1200px) {
   body {
@@ -45,7 +47,7 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
-  /*height: calc(60vw + 10px);*/
+  max-width: 1200px;
   flex-grow: 1;
 }
 
@@ -62,6 +64,7 @@ body {
   justify-content: flex-start;
   width: 1000%;
   height: 100%;
+  
 }
 
 .slider-item {
@@ -74,67 +77,41 @@ body {
 
 .slider-image {
   width: 100%;
-  height: calc(60vw);
+  min-height: 60vh;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 .slider-image.img-1 {
   background: url('./assets/1.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .slider-image.img-2 {
   background: url('./assets/2.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .slider-image.img-3 {
   background: url('./assets/3.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .slider-image.img-4 {
   background: url('./assets/4.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .slider-image.img-5 {
   background: url('./assets/5.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .slider-image.img-6 {
   background: url('./assets/6.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .slider-image.img-7 {
   background: url('./assets/7.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .slider-image.img-8 {
   background: url('./assets/8.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .slider-image.img-9 {
   background: url('./assets/9.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+
 }
 .slider-image.img-10 {
   background: url('./assets/10.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .slider-description {
@@ -148,7 +125,7 @@ body {
 
 @media screen and (max-width: 1200px) {
   .slider-description {
-    margin-top: 80px;
+    margin-top: 20px;
     font-size: 24px;
     line-height: 32px;
     text-align: center;
@@ -162,18 +139,17 @@ input[name="slide"] {
 
 .slider-controls {
   position: fixed;
-  top: calc((100vw - 20px) * 0.6 + 40px);
-  right: 20px;
+  top: calc(60vh + 20px);
+  right: calc((100vw - 1200px) / 2);
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-color: #3c4248;
-  transition: right ease 0.2s;
 }
 
 @media screen and (max-width: 1200px) {
   .slider-controls {
-    top: calc((100vw + 60px) * 0.6);
+    top: calc(60vh + 120px);
     right: 50%;
     transform: translateX(50%);
   }
