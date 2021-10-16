@@ -23,3 +23,102 @@ ul {
 a {
   text-decoration: none;
 }
+
+html {
+  background-color: slategrey;
+}
+
+body {
+  padding: 20px;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 500%;
+}
+
+.slider-item {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  transition: all ease 0.3s;
+}
+
+.slider-image {
+  width: 100%;
+  height: 85%;
+}
+
+.slider-description {
+  width: 100%;
+  height: 15%;
+}
+
+input[name="slide"] {
+  position: fixed;
+  visibility: hidden;
+}
+
+.slider-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.slider-input {
+  cursor: pointer;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.indicator {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.6;
+  border-radius: 50%;
+  transition: all ease 0.3s;
+}
+
+.slider-input:hover > .indicator {
+  opacity: 1; 
+}
+
+.slider-input:active > .indicator {
+  background-color: rgb(242, 86, 185);
+}
+
+.slider-input:checked > .indicator {
+  background-color: rgb(213, 66, 159);
+  transform: scale(1.2)
+}
+
+#slide-1:checked ~ .order-1 {
+  margin-left: 0;
+}
+
+#slide-2:checked ~ .order-1 {
+  margin-left: -20%;
+}
+
+#slide-3:checked ~ .order-1 {
+  margin-left: -40%;
+}
+
+#slide-4:checked ~ .order-1 {
+  margin-left: -60%;
+}
+
+#slide-5:checked ~ .order-1 {
+  margin-left: -80%;
+}
