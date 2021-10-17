@@ -74,6 +74,12 @@ body {
   height: 100%;
   transition: all ease 0.6s;
 }
+@media screen and (max-width: 1200px) {
+  .slider-item {
+    justify-content: space-between;
+  }
+}
+
 
 .slider-image {
   width: 100%;
@@ -126,7 +132,7 @@ body {
 @media screen and (max-width: 1200px) {
   .slider-description {
     margin-top: 20px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 32px;
     text-align: center;
   }
